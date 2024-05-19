@@ -1,0 +1,166 @@
+/* styles.css or tailwind.css */
+
+/* Style for the bottom border */
+.Navi-text {
+    position: relative; /* Position relative for absolute positioning */
+    display: inline-block;
+    text-decoration: none; /* Remove default link underline */
+    color: black; /* Default text color */
+  }
+  
+  /* Pseudo-element for the hover effect */
+  .Navi-text::after {
+    content: ''; /* Empty content */
+    position: absolute; /* Position absolute relative to parent */
+    left: 0; /* Align at the left edge */
+    bottom: -6px; /* Align just below the text */
+    width: 90%; /* Expand to full width */
+    height: 2px; /* Height of the bottom border */
+    background-color: #09a4fc; /* Color of the bottom border */
+    transform: scaleX(0); /* Initial scale (hidden) */
+    transition: transform 0.3s ease; /* Transition properties */
+  }
+  
+  /* Hover effect: expand the width */
+  .Navi-text:hover::after {
+    transform: scaleX(1);
+  }
+  
+
+  .router{
+    background-color: #E6F6FF;
+  }
+
+  .ServiceVideo{
+    
+  }
+
+  
+ .imageContainer img {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+
+
+.hovered-image {
+  width: 12rem; /* Equivalent to w-48 in Tailwind */
+  border: 2px solid #ccc;
+}
+
+.hovered-text {
+  /* Define text styles when image is hovered */
+  padding: 1rem; /* Adjust padding as needed */
+}
+
+.ColumnAnimation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* Keyframes for the zoom-in and zoom-out animation */
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* CSS styles for location images and animation */
+.location {
+  transition: width 0.5s ease-out; /* Smooth transition for width changes */
+}
+
+/* Animation classes based on state */
+.animate-zoom-delayed-1 {
+  animation: zoom-in-out 2s ease-out 1.3s; /* Starts after 0.3s delay */
+  animation-fill-mode: forwards; 
+}
+
+.animate-zoom-delayed-2 {
+  animation: zoom-in-out 2s ease-out 1.7s; /* Starts after 0.5s delay */
+  animation-fill-mode: forwards; 
+}
+
+.animate-zoom-delayed-3 {
+  animation: zoom-in-out 2s ease-out 2.1s; /* Starts after 0.7s delay */
+  animation-fill-mode: forwards; 
+}
+
+.animate-zoom-delayed-4 {
+  animation: zoom-in-out 2s ease-out 2.5s; /* Starts after 0.7s delay */
+  animation-fill-mode: forwards; 
+}
+
+.animate-zoom-delayed-5 {
+  animation: zoom-in-out 2s ease-out 3.1s; /* Starts after 0.7s delay */
+  animation-fill-mode: forwards; 
+}
+
+.Partners_page_brands_container {
+  display: flex;
+  width: fit-content;
+  animation: marquee 10s linear infinite;
+}
+
+.Partners_page_img {
+  width: 15vw;
+  height: 15vh;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.FooterPara{
+  max-width: 60%;
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+}
+
+/* DataTable.css */
+
+
+
+.arrow-icon {
+  height: 44px;
+  width: 44px;
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.rotated {
+  transform: rotate(-45deg); /* Rotate 45 degrees anticlockwise (to the left) */
+}
+
+
+.ContactBg{
+  width: 70%;
+}
